@@ -1,5 +1,5 @@
 # Divera-Monitor-Raspberry-Pi
-In diesem Tutorial wird der Divera Monitor auf einem Raspberry Pi zum laufen gebracht. Der Raspberry schaltet bei Alarmen sowie zu Dienstzeiten den Monitor an und im Anschluss wieder aus. Hier werden 2 Versionen präsentiert. Die erste Version schaltet bei Alarmen und Dienstzeiten den Monitor an bzw. wieder aus. Die zweite Version integriert außerdem einen Bewegungsmelder. Hierbei wird zu Dienstzeiten, wenn sich niemand vor dem Monitor befindet, der Bildschirmschoner eingeschaltet. Außerhalb der Dienstzeiten wird bei der Detektion von Bewegung der Monitor eingeschaltet.
+In diesem Tutorial wird auf einem Raspberry Pi eine autommatische Steuerung des Divera Monitors eingerichtet. Der Raspberry schaltet bei Alarmen sowie zu Dienstzeiten den Monitor an und im Anschluss wieder aus. Hier werden 2 Versionen präsentiert. Die erste Version schaltet bei Alarmen und Dienstzeiten den Monitor an bzw. wieder aus. Die zweite Version integriert außerdem einen Bewegungsmelder. Hierbei wird zu Dienstzeiten, wenn sich niemand vor dem Monitor befindet, der Bildschirmschoner eingeschaltet. Außerhalb der Dienstzeiten wird bei der Detektion von Bewegung der Monitor eingeschaltet.
 
 Das Folgende ist eine Schritt für Schritt Anleitung, die vom Kauf des Raspberrys bis zum fertigen Monitor geht.
 
