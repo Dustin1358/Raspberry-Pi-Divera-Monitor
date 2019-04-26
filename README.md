@@ -16,10 +16,10 @@ Zuerst muss das "Welcome to Raspberry Pi" Tutorial durchlaufen werden mit anschl
 Im Folgenden werden einige Anwendungen benötigt die nun installiert werden. Dafür muss ein Terminal geöffnet werden. Dies kann z.B. durch die Tastenkombination STRG-ALT-t geschehen. Im Terminal muss nun Folgendes eingegeben und mit Enter bestätigt werden.
 
 ```sh
-sudo apt install jq unclutter cec-utils
+sudo apt install jq unclutter cec-utils xscreensaver
 ```
 
-Jq wird dabei für die Bash Variante des Skripts benötigt. Mittels unclutter wird der Mauszeiger ausgeblendet. Cec-utils wird verwendet um einige Fernsehr ein bzw. aus zu schalten.
+Jq wird dabei für die Bash Variante des Skripts benötigt. Mittels unclutter wird der Mauszeiger ausgeblendet. Cec-utils wird verwendet um einige Fernsehr ein bzw. aus zu schalten. Xscreensaver wird für die Version mit Bewegungsmelder benötigt.
 
 # Monitor und Bildschirm Befehle hinzufügen
 Als nächstes werden bash-Befehle die den Fernseher bzw. den Monitor an/aus schalten können hinzugefügt.
