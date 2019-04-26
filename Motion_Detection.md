@@ -30,7 +30,7 @@ Damit das Skript funktioniert, muss noch der Bewegungsmelder angeschlossen werde
 
 # Bewegungsmelder:
 
-Zum einem wird der Bewegungsmelder benötigt. Dieser kann zum Beispiel [hier](https://www.amazon.de/gp/product/B01N3QE4TQ/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1) oder [hier](https://www.amazon.de/gp/product/B008AESDSY?ie=UTF8&linkCode=as2&camp=1634&creative=6738&tag=754-21&creativeASIN=B008AESDSY) erworben werden. Dazu werden noch Jumperkabel zum Verbinden benötigt. Der Anschluss der Kabel kann aus dem Abbild von [diesem](https://tutorials-raspberrypi.de/raspberry-pi-bewegungsmelder-sensor-pir/) Tutorial entnommen werden.
+Zum einem wird der Bewegungsmelder benötigt. Dieser kann zum Beispiel [hier](https://www.amazon.de/gp/product/B01N3QE4TQ/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1) oder [hier](https://www.amazon.de/gp/product/B008AESDSY?ie=UTF8&linkCode=as2&camp=1634&creative=6738&tag=754-21&creativeASIN=B008AESDSY) erworben werden. Dazu werden noch Jumperkabel zum Verbinden benötigt. Der Anschluss der Kabel kann aus dem Abbild von [diesem](https://tutorials-raspberrypi.de/raspberry-pi-bewegungsmelder-sensor-pir/) Tutorial entnommen werden. Eine detalierte Beschreibung des Sensors ist [hier](http://elektro.turanis.de/html/prj108/index.html) zu finden. Beim Sensor sollte der Jumper set auf High gesetzt werden. Die Time On und Sensitivität müssen abhängig vom Ort des Sensors eingestellt werden.
 
 # Bildschirmschoner:
 
