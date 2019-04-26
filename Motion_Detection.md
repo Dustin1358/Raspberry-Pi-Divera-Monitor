@@ -34,4 +34,8 @@ Zum einem wird der Bewegungsmelder benötigt. Dieser kann zum Beispiel [hier](ht
 
 # Bildschirmschoner:
 
-Außerdem muss noch der Bildschirmschoner eingerichtet werden. Als Bildschirmschoner kann bspw. xscreensaver verwendet und nach Wünschen eingerichtet werden.
+Außerdem muss noch der Bildschirmschoner eingerichtet werden. Als Bildschirmschoner kann bspw. xscreensaver verwendet und nach Wünschen eingerichtet werden. Die Einstellungen können unter Start->Einstellungen->Bildschirmschoner gesetzt werden. Beim ersten Start muss der xscreensaver-Prozess, wie im Pop-Up empfohlen, gestartet werden. Mittels
+```sh
+sudo apt install xscreensaver-gl-extra
+```
+wird unter anderem der Bildschirmschoner GLSlideshow installiert mit dem eine einfach Slideshow von Bildern angezeigt werden kann.
