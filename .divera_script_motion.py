@@ -26,16 +26,18 @@ def monitor(command):
 def screen(command):
 	global SCREEN_ACTIVE
 	if(command=="on"):
+		print("Turns screen on")
 		if(ALARM_ACTIVE):
 			screen_saver("off")
 		else:
 			init_screen_saver()
 		SCREEN_ACTIVE=True
-		subprocess.Popen(['bash','-c','. .divera_commands.sh; screen on'])
+		subprocess.Popen(['bash','-c','. .divera_commands.sh; screen on']).wait()
 	elif(command=="off"):
+		print("Turns screen off")
 		screen_saver("off")
 		SCREEN_ACTIVE=False
-		subprocess.Popen(['bash','-c','. .divera_commands.sh; screen off'])
+		subprocess.Popen(['bash','-c','. .divera_commands.sh; screen off']).wait()
 
 #wrapper function that turns the screensaver on/off
 def screen_saver(command):
