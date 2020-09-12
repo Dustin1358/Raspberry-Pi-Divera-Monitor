@@ -94,7 +94,7 @@ while True:
 	#sets the alarm except for the test alarm ("Probealarm")
 	try:
 		result = requests.get(API_URL).content.decode()
-		ALARM_ACTIVE = "true" in result and "success" in result and "Probealarm" not in result
+		ALARM_ACTIVE = "\"success\":true" in result and "Probealarm" not in result
 	except: #if not internet connection avaible show
 		#screen that people recognize that somethong is wrong
 		ALARM_ACTIVE=True
