@@ -29,7 +29,7 @@ monitor("on")
 while True:
 
 	try:
-		alarm_active = "false" not in requests.get(API_URL).content.decode()
+		alarm_active = "\"success\":true" in requests.get(API_URL).content.decode()
 	except: #if not internet connection avaible show
 		#screen that people recognize that somethong is wrong 
 		alarm_active=True
