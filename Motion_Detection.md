@@ -39,3 +39,4 @@ Außerdem muss noch der Bildschirmschoner eingerichtet werden. Als Bildschirmsch
 sudo apt install xscreensaver-gl-extra
 ```
 wird unter anderem der Bildschirmschoner GLSlideshow installiert mit dem eine einfach Slideshow von Bildern angezeigt werden kann.
+Die Dauer bis der Bildschirmschoner sich automatisch einschaltet sollte auf das maximum gesetzt werden, da der Bildschormschoner eigentlich ausschließlich vom script gesteuert werden soll.
