@@ -128,7 +128,7 @@ Mit dieser veränderten Autostartdatei wird zum einen der Desktop nicht mehr ges
 
 Abhängig davon, ob ein Python oder Bash-Skript verwendet wird, muss eine der letzten beiden Zeilen auskommentiert werden. Das heißt, wenn das Python-Skript verwendet wird, darf die Zeile *./.divera_script.py* keine Raute am Anfang enthalten und *#./.divera_script.py* muss mit einer Raute anfangen. Im Falle des Bash-Skripts muss es *#./.divera_script.py* und *./.divera_script.sh* sein.
 
-Wird das Script mit Bewegungsmelder verwendet muss die Zeile *#@xscreensaver -no-splash* auskommentiert werden!
+Wird das Script mit Bewegungsmelder verwendet muss die Raute in der Zeile *#@xscreensaver -no-splash* entfernt werden!
 
 
 # Problembehandlung
