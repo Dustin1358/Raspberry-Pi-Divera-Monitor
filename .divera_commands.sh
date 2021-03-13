@@ -4,8 +4,9 @@
 # turning the screen ond and off and also starts and stops the monitor.
 # Source this file in your bash.rc to have the commands in your terminal.
 
-#The url of your monitor (with Acesskey for autologin).
-MONITOR={YOUR MONITOR URL}
+# The url of your monitor (with Acesskey for autologin).
+# Also replace the braces
+MONITOR="{YOUR MONITOR URL}"
 
 # This function starts or stops the divera monitor.
 function monitor(){
