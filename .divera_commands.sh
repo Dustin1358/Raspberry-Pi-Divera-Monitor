@@ -5,6 +5,7 @@
 # Source this file in your bash.rc to have the commands in your terminal.
 
 # The url of your monitor (with Acesskey for autologin).
+# This is the monitor account and not the alarm accesskey
 # Also replace the braces
 MONITOR="{YOUR MONITOR URL}"
 
