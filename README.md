@@ -34,7 +34,7 @@ In diese Datei kommt der Inhalt der folgenden Datei (am besten copy-paste nutzen
 
 [.divera_commands.sh](.divera_commands.sh)
 
-Hierbei muss die Variable MONITOR die url des Monitores enthalten. Außerdem gibt es, abhängig vom Bildschirm den man ein/aus schalten möchte, mehr oder weniger Probleme. Deshalb wurden hier zwei verschiedene Optionen eingefügt wie sich ein Bildschirm ein bzw. aus schalten lässt. Falls das An-/Ausschalten des Bildschirms Probleme bereitet, kann in der [Problembehandlung](Problembehandlung.md) ein Lösungsansatz gefunden werden.
+Hierbei muss die Variable MONITOR die url des Monitores enthalten. Dieser kann in der Divera Adminoberfläche unter Verwaltung -> Setup -> Monitore erstellt werden. Beim erstellen muss außerdem "Autologin" aktiviert sein. Außerdem gibt es, abhängig vom Bildschirm den man ein/aus schalten möchte, mehr oder weniger Probleme. Deshalb wurden hier zwei verschiedene Optionen eingefügt wie sich ein Bildschirm ein bzw. aus schalten lässt. Falls das An-/Ausschalten des Bildschirms Probleme bereitet, kann in der [Problembehandlung](Problembehandlung.md) ein Lösungsansatz gefunden werden.
 
 
 Mit STRG-o wird eine Datei nach einem weiteren Enter gespeichert und mit STRG-x wird nano verlassen.
