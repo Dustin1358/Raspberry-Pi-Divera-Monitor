@@ -15,6 +15,8 @@ und fügen dieses Skript ein:
 
 In dem Skript muss noch der Accesskey hinzugefügt werden und die Dienstzeiten müssen angepasst werden.
 
+Der Accesskey kann in der Divera Adminoberfläche unter Schnittstellen -> API -> Autorisierung erstellt werden, es ist nicht der Acesskey des Monitors.
+
 Nachdem das Skript hinzugefügt wurde muss es mit folgenden Befehl noch ausführbar gemacht werden:
 
 ```sh
