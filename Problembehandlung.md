@@ -39,3 +39,7 @@ Obwohl der Bildschirm ausgehen müsste, also kein Dienst ist (und keine Bewegung
 
 Außerdem wurde hier noch ein manuelles Umschalten auf den HDMI-Port 1 hinzugefügt, falls der Fernseher standardmäßig auf einem anderen Eingang ist. Das heißt, dass der Monitor zwingend an HDMI-Port 1 angeschlossen werden muss oder der Port im Quellcode geändert werden muss. Das Umschalten des HDMI-Ports ist nicht in der cec-Spezifikation vorhanden, das heißt, dass dies ebenso nicht jeder Fernseher unterstützen muss. Dies entspricht der Version 2b und muss Zusätzlich zu Version 2 auskommentiert werden.
 
+# Bildschirm bleibt nach einem Tag schwarz
+
+Nach dem starten des Monitors läuft der Monitor wie gewünscht, ab dem nächsten Tag bleibt der Bildschirm allerdings schwarz. Dies kann bei einigen Bildschirm/Fernsehr passieren und das Problem liegt beim nächtlichen update bzw. neustarten.
+Eine Lösung ist es den Bildschirm vor dem neustarten einzuschalten. Dies kann durch ein "screen("on")" vor dem "sudo apt update" im script geschehen.
