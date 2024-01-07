@@ -1,29 +1,29 @@
 # Divera-Monitor-Raspberry-Pi
-In diesem Tutorial wird auf einem Raspberry Pi eine autommatische Steuerung des Divera Monitors eingerichtet. Der Raspberry schaltet bei Alarmen sowie zu Dienstzeiten den Monitor an und im Anschluss wieder aus. Hier werden 2 Versionen präsentiert. Die erste Version schaltet bei Alarmen und Dienstzeiten den Monitor an bzw. wieder aus. Die zweite Version integriert außerdem einen Bewegungsmelder. Hierbei wird zu Dienstzeiten, wenn sich niemand vor dem Monitor befindet, der Bildschirmschoner eingeschaltet. Außerhalb der Dienstzeiten wird bei der Detektion von Bewegung der Monitor eingeschaltet.
+In diesem Tutorial wird auf einem Raspberry Pi eine automatische Steuerung des Divera Monitors eingerichtet. Der Raspberry schaltet bei Alarmen sowie zu Dienstzeiten den Monitor an und im Anschluss wieder aus. Hier werden 2 Versionen präsentiert. Die erste Version schaltet bei Alarmen und Dienstzeiten den Monitor an bzw. wieder aus. Die zweite Version integriert außerdem einen Bewegungsmelder. Hierbei wird zu Dienstzeiten, wenn sich niemand vor dem Monitor befindet, der Bildschirmschoner eingeschaltet. Außerhalb der Dienstzeiten wird bei der Detektion von Bewegung der Monitor eingeschaltet.
 
-Das Folgende ist eine Schritt für Schritt Anleitung, die vom Kauf des Raspberrys bis zum fertigen Monitor geht.
+Das Folgende ist eine Schritt-für-Schritt-Anleitung, die vom Kauf des Raspberrys bis zum fertigen Monitor geht.
 
 # Raspberry Pi
-Dieses Tutorial basiert auf den aktuellen Raspberry 3 B+. Falls noch keiner gekauft wurde, kann bspw. von ABOX ein Komplettpacket mit Ladegerät, SD-Karte und weiterem Zubehör gekauft werden. Als Betriebssystem Image wurde *Raspbian Stretch with desktop* verwendet.
+Dieses Tutorial basiert auf dem Modell Raspberry Pi 3 B+. Falls noch keiner gekauft wurde, kann bspw. von ABOX ein Komplettpaket mit Ladegerät, SD-Karte und weiterem Zubehör gekauft werden. Als Betriebssystem Image wurde *Raspbian Stretch with desktop* verwendet.
 
 # Erster Start in NOOBS (Dieser Absatz bezieht sich darauf, dass eine SD-Karte mit NOOBS verwendet wird)
-Beim ersten Start in NOOBS sollte zuerst eine Internet Verbindung aufgebaut werden (Wlan oder Lan). Dies ist nötig, damit kein veraltetes Image, sondern das aktuelle Rasbian aufgespielt wird. Nun muss Raspbian in der Empfohlenen Version (*Raspbian Stretch with desktop*) ausgewählt werden, sodass NOOBS das aktuelle Raspbian Image installiert.
+Beim ersten Start in NOOBS sollte zuerst eine Internetverbindung aufgebaut werden (Wlan oder Lan). Dies ist nötig, damit kein veraltetes Image, sondern das aktuelle Rasbian aufgespielt wird. Nun muss Raspbian in der empfohlenen Version (*Raspbian Stretch with desktop*) ausgewählt werden, sodass NOOBS das aktuelle Raspbian-Image installiert.
 
 # Erster Start von Rasbian
-Zuerst muss das "Welcome to Raspberry Pi" Tutorial durchlaufen werden mit anschließendem Aktualisieren der Softwarepakete. Dafür muss ebenfalls eine Internetverbindung bestehen. Zum Ende des Tutorials den Raspberry neu starten, wie auch bei der Einrichtung empfohlen wird.
+Zuerst muss das "Welcome to Raspberry Pi"-Tutorial durchlaufen werden mit anschließendem Aktualisieren der Softwarepakete. Dafür muss ebenfalls eine Internetverbindung bestehen. Zum Ende des Tutorials den Raspberry neustarten, wie auch bei der Einrichtung empfohlen wird.
 
 # Installation von Anwendungen
-Im Folgenden werden einige Anwendungen benötigt die nun installiert werden. Dafür muss ein Terminal geöffnet werden. Dies kann z.B. durch die Tastenkombination STRG-ALT-t geschehen. Im Terminal muss nun Folgendes eingegeben und mit Enter bestätigt werden.
+Im Folgenden werden einige Anwendungen benötigt, die nun installiert werden. Dafür muss ein Terminal geöffnet werden. Dies kann z.B. durch die Tastenkombination STRG-ALT-t geschehen. Im Terminal muss nun Folgendes eingegeben und mit Enter bestätigt werden.
 
 ```sh
 sudo apt install jq unclutter cec-utils xscreensaver
 ```
 
-Jq wird dabei für die Bash Variante des Skripts benötigt. Mittels unclutter wird der Mauszeiger ausgeblendet. Cec-utils wird verwendet um einige Fernsehr ein bzw. aus zu schalten. Xscreensaver wird für die Version mit Bewegungsmelder benötigt.
+Jq wird dabei für die Bash-Variante des Skripts benötigt. Mittels unclutter wird der Mauszeiger ausgeblendet. Cec-utils wird verwendet, um einige Fernseher ein- bzw. auszuschalten. Xscreensaver wird für die Version mit Bewegungsmelder benötigt.
 
-# Monitor und Bildschirm Befehle hinzufügen
-Als nächstes werden bash-Befehle die den Fernseher bzw. den Monitor an/aus schalten können hinzugefügt.
-Im Terminal wird nun der Editor *nano* verwendet um eine neue Datei mit folgendem Befehl anzulegen:
+# Monitor- und Bildschirm-Befehle hinzufügen
+Als nächstes werden bash-Befehle, die den Fernseher bzw. den Monitor an-/ausschalten können, hinzugefügt.
+Im Terminal wird nun der Editor *nano* verwendet, um eine neue Datei mit folgendem Befehl anzulegen:
 
 ```sh
 nano .divera_commands.sh
@@ -34,26 +34,26 @@ In diese Datei kommt der Inhalt der folgenden Datei (am besten copy-paste nutzen
 
 [.divera_commands.sh](.divera_commands.sh)
 
-Hierbei muss die Variable MONITOR die url des Monitores enthalten. Dieser kann in der Divera Adminoberfläche unter Verwaltung -> Setup -> Monitore erstellt werden. Beim erstellen muss außerdem "Autologin" aktiviert sein. Außerdem gibt es, abhängig vom Bildschirm den man ein/aus schalten möchte, mehr oder weniger Probleme. Deshalb wurden hier zwei verschiedene Optionen eingefügt wie sich ein Bildschirm ein bzw. aus schalten lässt. Falls das An-/Ausschalten des Bildschirms Probleme bereitet, kann in der [Problembehandlung](Problembehandlung.md) ein Lösungsansatz gefunden werden.
+Hierbei muss die Variable MONITOR die URL des Monitors enthalten. Dieser kann in der Divera Adminoberfläche unter Verwaltung -> Setup -> Monitore erstellt werden. Beim Erstellen muss außerdem "Autologin" aktiviert sein. Außerdem gibt es, abhängig vom Bildschirm, den man ein-/ausschalten möchte, mehr oder weniger Probleme. Deshalb wurden hier zwei verschiedene Optionen eingefügt, wie sich ein Bildschirm ein- bzw. ausschalten lässt. Falls das An-/Ausschalten des Bildschirms Probleme bereitet, kann in der [Problembehandlung](Problembehandlung.md) ein Lösungsansatz gefunden werden.
 
 
 Mit STRG-o wird eine Datei nach einem weiteren Enter gespeichert und mit STRG-x wird nano verlassen.
 
-Diese Datei enthält die Befehle um den Divera Monitor an
+Diese Datei enthält die Befehle um den Divera Monitor an-
 
 ```sh
 monitor on
 ```
-und aus zu schalten
+und auszuschalten
 ```sh
 monitor off
 ```
 .
-Sowie den Bildschirm an
+Sowie den Bildschirm an-
 ```sh
 screen on
 ```
-und aus zu schalten
+und auszuschalten
 ```sh
 screen off
 ```
@@ -73,7 +73,7 @@ und am Ende der Datei wird in einer neuen Zeile Folgendes hinzugefügt:
 source .divera_commands.sh
 ```
 
-Nachdem die Zeile hinzugefügt wurde kann die bashrc im Terminal neu geladen werden mit dem Befehl:
+Nachdem die Zeile hinzugefügt wurde, kann die bashrc im Terminal neu geladen werden mit dem Befehl:
 
 ```sh
 . ~/.bashrc
@@ -124,11 +124,11 @@ In die Autostartdatei wird folgender Inhalt hinzugefügt:
 ./.divera_script.py
 ```
 
-Mit dieser veränderten Autostartdatei wird zum einen der Desktop nicht mehr gestartet (dies kann Rückgängig gemacht werden indem die ersten drei Kommandos wieder einkommentiert werden) zum anderen wird der Mauszeiger nach 5 Sekunden ausgeblendet.
+Mit dieser veränderten Autostartdatei wird zum einen der Desktop nicht mehr gestartet (dies kann Rückgängig gemacht werden, indem die ersten drei Kommandos wieder einkommentiert werden), zum anderen wird der Mauszeiger nach 5 Sekunden ausgeblendet.
 
-Abhängig davon, ob ein Python oder Bash-Skript verwendet wird, muss eine der letzten beiden Zeilen auskommentiert werden. Das heißt, wenn das Python-Skript verwendet wird, darf die Zeile *./.divera_script.py* keine Raute am Anfang enthalten und *#./.divera_script.py* muss mit einer Raute anfangen. Im Falle des Bash-Skripts muss es *#./.divera_script.py* und *./.divera_script.sh* sein.
+Abhängig davon, ob ein Python- oder Bash-Skript verwendet wird, muss eine der letzten beiden Zeilen auskommentiert werden. Das heißt, wenn das Python-Skript verwendet wird, darf die Zeile *./.divera_script.py* keine Raute am Anfang enthalten und *#./.divera_script.py* muss mit einer Raute anfangen. Im Falle des Bash-Skripts muss es *#./.divera_script.py* und *./.divera_script.sh* sein.
 
-Wird das Script mit Bewegungsmelder verwendet muss die Raute in der Zeile *#@xscreensaver -no-splash* entfernt werden!
+Wird das Script mit Bewegungsmelder verwendet, muss die Raute in der Zeile *#@xscreensaver -no-splash* entfernt werden!
 
 
 # Problembehandlung
